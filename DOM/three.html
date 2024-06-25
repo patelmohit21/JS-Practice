@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<style>
+    .bg-body{
+        background-color: rgb(20, 3, 3);
+        color: aliceblue;
+    }
+</style>
+<body class="bg-body">
+
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+    <script>
+
+       function addelement(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+        
+        }
+        addelement("python")
+
+        function optilanguage(langname){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+
+        }
+        optilanguage("c++")
+        optilanguage("java")
+        optilanguage("HTML")
+
+        // Edit
+
+        const secondlang = document.querySelector('li:nth-child(2)')
+        //secondlang.innerHTML = "MOJO"
+        const newli = document.createElement('li')
+        newli.textContent = "MOJI"
+        secondlang.replaceWith(newli)
+
+        const firstlang = document.querySelector("li:first-child")
+        firstlang.outerHTML = "<li>Ruby</li>"
+
+        ///remove
+
+        const removeLang = document.querySelector("li:last-child")
+        removeLang.remove()
+
+
+       
+
+
+    </script>
+       
+</body>
+</html>

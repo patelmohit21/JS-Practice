@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Child</title>
+</head>
+
+<style>
+    .bg-body{
+        background-color: rgb(20, 3, 3);
+        color: aliceblue;
+    }
+</style>
+
+<body class="bg-body">
+    <script>
+        const div = document.createElement('div')
+        console.log(div)
+        div.className = "main"
+        div.innerHTML = "This is a Div"
+        div.style.backgroundColor = "green"
+        div.setAttribute("title", "generated-title")
+        div.padding = "10px"
+        document.body.appendChild(div)
+    </script>
+    
+</body>
+</html>
